@@ -75,14 +75,6 @@ public class IntroFragment extends Fragment {
                 case 0 : return new NotesFragment();
                 case 1 : return new ListOfPremiumsFragment();
                 case 2 : return new DetailsFragment();
-                case 3 : return new VelocityInfoFragment();
-                case 4 : return new AccelerationInfoFragment();
-                case 5 : return new JerkInfoFragment();
-                case 6 : return new ForceInfoFragment();
-                case 7 : return new WorkInfoFragment();
-                case 8 : return new PowerInfoFragment();
-                case 9 : return new ImpulseInfoFragment();
-                case 10 : return new OtherParametersInfoFragment();
             }
             return null;
         }
@@ -99,27 +91,11 @@ public class IntroFragment extends Fragment {
 
             switch (position){
                 case 0 :
-                    return "Notes";
+                    return "Main";
                 case 1 :
-                    return "Sensors";
+                    return "List";
                 case 2 :
-                    return "Distance";
-                case 3 :
-                    return "Velocity";
-                case 4 :
-                    return "Acceleration";
-                case 5 :
-                    return "Jerk";
-                case 6 :
-                    return "Force";
-                case 7 :
-                    return "Work";
-                case 8 :
-                    return "Power";
-                case 9 :
-                    return "Impulse";
-                case 10 :
-                    return "Other Parameters";
+                    return "Details";
             }
             return null;
         }
