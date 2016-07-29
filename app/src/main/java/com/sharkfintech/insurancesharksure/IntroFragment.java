@@ -73,8 +73,8 @@ public class IntroFragment extends Fragment {
         {
             switch (position){
                 case 0 : return new NotesFragment();
-                case 1 : return new SensorsListFragment();
-                case 2 : return new DisplacementInfoFragment();
+                case 1 : return new ListOfPremiumsFragment();
+                case 2 : return new DetailsFragment();
                 case 3 : return new VelocityInfoFragment();
                 case 4 : return new AccelerationInfoFragment();
                 case 5 : return new JerkInfoFragment();

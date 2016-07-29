@@ -1,0 +1,63 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        tools:context="com.albertzhang.accelarchwizard.NotesFragment">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:id="@+id/AccelHat"
+            android:gravity="center_vertical|center_horizontal|center"
+            android:src="@drawable/logolarge"
+            android:onClick="rotate"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/about_text"
+            android:text="Welcome"
+            android:textSize="18dp"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/about_subtext3"
+            android:text="\n Quick description of ασφάλιση Insurance company "
+            android:textColorLink="#FFFFFF"
+            android:autoLink="web"
+            android:layout_below="@+id/about_subtext2"
+            android:textSize="18dp"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/about_subtext4"
+            android:text="\n Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in fermentum magna. Vestibulum sed varius libero. Phasellus pulvinar nisl semper urna volutpat blandit. Praesent eget varius sapien."
+            android:textColorLink="#FFFFFF"
+            android:autoLink="web"
+            android:layout_below="@+id/about_subtext3"
+            android:textSize="18dp"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+</ScrollView>
