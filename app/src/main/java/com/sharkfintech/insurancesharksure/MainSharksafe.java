@@ -80,15 +80,15 @@ public class MainSharksafe extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_archwizard) {
+        if (id == R.id.nav_intro) {
             //set FragmentArchwizardMain
             this.setTitle("AccelArchwizard");
-            FragmentArchwizardMain mainarchwizard = new FragmentArchwizardMain();
+            IntroFragment introFragment = new IntroFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, mainarchwizard);
+            fragmentTransaction.replace(R.id.fragment_container, introFragment);
             fragmentTransaction.commit();
 
-        } else if (id == R.id.nav_displacementtime) {
+        }/* else if (id == R.id.nav_displacementtime) {
             this.setTitle("Displacement/Time Graph");
             DisplacementTimeGraph distTimeGraph = new DisplacementTimeGraph();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
@@ -107,12 +107,7 @@ public class MainSharksafe extends AppCompatActivity
             AccelerationTimeGraph accelTimeGraph = new AccelerationTimeGraph();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, accelTimeGraph);
-            fragmentTransaction.commit();
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
+            fragmentTransaction.commit();*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

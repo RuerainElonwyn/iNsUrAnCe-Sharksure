@@ -18,13 +18,13 @@ import com.sharkfintech.insurancesharksure.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FragmentArchwizardMain extends Fragment {
+public class IntroFragment extends Fragment {
 
     public static TabLayout tabLayout;
     public static ViewPager viewPager;
     public static int int_items = 11 ;
 
-    public FragmentArchwizardMain() {
+    public IntroFragment() {
         // Required empty public constructor
     }
 
@@ -35,7 +35,7 @@ public class FragmentArchwizardMain extends Fragment {
         /**
          *Inflate tab_layout and setup Views.
          */
-        View x =  inflater.inflate(R.layout.fragment_archwizard_main, null);//main fragment has a tab layout with nested fragments
+        View x =  inflater.inflate(R.layout.fragment_intro, null);//main fragment has a tab layout with nested fragments
         tabLayout = (TabLayout) x.findViewById(R.id.tab);
         viewPager = (ViewPager) x.findViewById(R.id.viewpager);
         /**

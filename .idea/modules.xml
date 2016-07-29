@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/iNsUrAnCe-Sharksure.iml" filepath="$PROJECT_DIR$/iNsUrAnCe-Sharksure.iml" />
-      <module fileurl="file://$PROJECT_DIR$/iNsUrAnCeSharksure.iml" filepath="$PROJECT_DIR$/iNsUrAnCeSharksure.iml" />
     </modules>
   </component>
 </project>
