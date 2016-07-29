@@ -45,7 +45,7 @@ public class DataUploader {
     public void post(){
         try{
             HttpClient httpClient = new DefaultHttpClient();
-            HttpPost request = new HttpPost(UPLOAD_URL);
+            HttpPost request = new HttpPost(UPLOAD_URL + user);
             StringEntity se = new StringEntity(data_array.toString());
             request.setEntity(se);
             request.setHeader("Accept", "application/json");
