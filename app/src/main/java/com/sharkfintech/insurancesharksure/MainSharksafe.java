@@ -80,19 +80,39 @@ public class MainSharksafe extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_archwizard) {
+            //set FragmentArchwizardMain
+            this.setTitle("AccelArchwizard");
+            FragmentArchwizardMain mainarchwizard = new FragmentArchwizardMain();
+            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, mainarchwizard);
+            fragmentTransaction.commit();
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_displacementtime) {
+            this.setTitle("Displacement/Time Graph");
+            DisplacementTimeGraph distTimeGraph = new DisplacementTimeGraph();
+            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, distTimeGraph);
+            fragmentTransaction.commit();
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_velocitytime) {
+            this.setTitle("Velocity/Time Graph");
+            VelocityTimeGraph veloTimeGraph = new VelocityTimeGraph();
+            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, veloTimeGraph);
+            fragmentTransaction.commit();
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_accelerationtime) {
+            this.setTitle("Acceleration/Time Graph");
+            AccelerationTimeGraph accelTimeGraph = new AccelerationTimeGraph();
+            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, accelTimeGraph);
+            fragmentTransaction.commit();
 
-        } else if (id == R.id.nav_send) {
-
-        }
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
