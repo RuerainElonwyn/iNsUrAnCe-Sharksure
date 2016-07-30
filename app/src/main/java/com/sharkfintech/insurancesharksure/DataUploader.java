@@ -34,7 +34,7 @@ public class DataUploader {
             try{
                 json.put("time", time);
                 json.put("type", type);
-                json.put("accel", value);
+                json.put("value", value);
                 data_array.put(json);
             }catch(JSONException e){
                 e.printStackTrace();
