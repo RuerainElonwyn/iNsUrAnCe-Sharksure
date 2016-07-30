@@ -16,6 +16,7 @@ import android.os.AsyncTask;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -46,7 +47,9 @@ public class AccelLoggerService extends Service implements SensorEventListener {
                         UploaderJobSchedule.class.getName() ) );
         builder.setPeriodic(60000);
         builder.setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY);
-
+        if( jobScheduler.schedule( builder.build() ) <= 0 ) {
+            Log.d("s", "gg buddy");
+        }
         return START_STICKY;
     }
 
