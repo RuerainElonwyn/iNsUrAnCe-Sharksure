@@ -20,7 +20,7 @@ import java.io.UnsupportedEncodingException;
  * Created by Orcas on 29/7/2016.
  */
 public class DataUploader {
-    private static final String UPLOAD_URL = ""; //
+    private static final String UPLOAD_URL = "http://sharksure-kashie.rhccloud.com/"; //
     private JSONArray data_array;
     private String user;
     public DataUploader(String user, String type, String raw_data){
