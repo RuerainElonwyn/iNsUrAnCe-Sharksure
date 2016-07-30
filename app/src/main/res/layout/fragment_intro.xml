@@ -24,17 +24,17 @@
         <android.support.design.widget.TabItem
             android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:text="Notes"/>
+            android:text="Main"/>
 
         <android.support.design.widget.TabItem
             android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:text="Sensors"/>
+            android:text="Lists"/>
 
         <android.support.design.widget.TabItem
             android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:icon="@drawable/displacement"/>
+            android:text="Details"/>
 
     </android.support.design.widget.TabLayout>
 
