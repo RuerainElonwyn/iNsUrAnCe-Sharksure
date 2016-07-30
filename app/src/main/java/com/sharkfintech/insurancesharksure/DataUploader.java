@@ -22,7 +22,7 @@ import java.io.UnsupportedEncodingException;
 public class DataUploader {
     private static final String UPLOAD_URL = "http://sharksure-kashie.rhccloud.com/"; //
     private JSONArray data_array;
-    private String user;
+    private String user = "chandrasekaranakash2000@gmail.com";
     public DataUploader(String user, String type, String raw_data){
         String[] data = raw_data.split(",");
         data_array = new JSONArray();

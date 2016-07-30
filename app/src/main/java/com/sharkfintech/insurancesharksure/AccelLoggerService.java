@@ -45,7 +45,7 @@ public class AccelLoggerService extends Service implements SensorEventListener {
         JobInfo.Builder builder = new JobInfo.Builder( 1,
                 new ComponentName( getPackageName(),
                         UploaderJobSchedule.class.getName() ) );
-        builder.setPeriodic(60000);
+        builder.setPeriodic(5000);
         builder.setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY);
         if( jobScheduler.schedule( builder.build() ) <= 0 ) {
             Log.d("s", "gg buddy");
@@ -97,6 +97,7 @@ public class AccelLoggerService extends Service implements SensorEventListener {
                 }
                 DataUploader uploader = new DataUploader("jerkymotion", "accel", csv);
                 jobFinished((JobParameters) msg.obj, false);
+                Log.i("hi","Anything");
                 return false;
             }
         });

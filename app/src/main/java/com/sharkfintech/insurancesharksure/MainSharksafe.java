@@ -31,14 +31,14 @@ public class MainSharksafe extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent intent = new Intent(getApplicationContext(), AccelLoggerService.class );
-                //startService(intent);
+                Intent intent = new Intent(getApplicationContext(), AccelLoggerService.class );
+                startService(intent);
 
-                AlarmManager scheduler = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+                /*AlarmManager scheduler = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
                 Intent intent = new Intent(getApplicationContext(), AccelLoggerService.class );
                 PendingIntent scheduledIntent = PendingIntent.getService(getApplicationContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
-                scheduler.setInexactRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), AlarmManager.INTERVAL_FIFTEEN_MINUTES, scheduledIntent);
+                scheduler.setInexactRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), AlarmManager.INTERVAL_FIFTEEN_MINUTES, scheduledIntent);*/
 
                 Snackbar.make(view, "Service Started", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
