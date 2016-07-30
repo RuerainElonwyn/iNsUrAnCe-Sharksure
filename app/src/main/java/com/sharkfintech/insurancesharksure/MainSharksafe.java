@@ -1,5 +1,8 @@
 package com.sharkfintech.insurancesharksure;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -28,8 +31,15 @@ public class MainSharksafe extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Intent intent = new Intent(getApplicationContext(), AccelLoggerService.class );
+                //startService(intent);
+
+                AlarmManager scheduler = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
                 Intent intent = new Intent(getApplicationContext(), AccelLoggerService.class );
-                startService(intent);
+                PendingIntent scheduledIntent = PendingIntent.getService(getApplicationContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+                scheduler.setInexactRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), AlarmManager.INTERVAL_FIFTEEN_MINUTES, scheduledIntent);
+
                 Snackbar.make(view, "Service Started", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
