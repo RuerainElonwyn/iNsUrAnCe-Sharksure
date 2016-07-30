@@ -40,15 +40,22 @@ public class AccelLoggerService extends Service implements SensorEventListener {
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         sensorManager.registerListener(this, sensor,
                 SensorManager.SENSOR_DELAY_NORMAL);
-
+        Log.i("s", "init");
         JobScheduler jobScheduler = (JobScheduler) getSystemService(Context.JOB_SCHEDULER_SERVICE);
         JobInfo.Builder builder = new JobInfo.Builder( 1,
                 new ComponentName( getPackageName(),
                         UploaderJobSchedule.class.getName() ) );
+<<<<<<< HEAD
         builder.setPeriodic(5000);
         builder.setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY);
+=======
+        builder.setPeriodic(60000);
+        //builder.setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY);
+>>>>>>> f80e26e806ccc8e06e31b86af8b406c5e3cd13df
         if( jobScheduler.schedule( builder.build() ) <= 0 ) {
-            Log.d("s", "gg buddy");
+            Log.i("s", "gg buddy");
+        }else{
+            Log.i("s", "start");
         }
         return START_STICKY;
     }
@@ -96,6 +103,7 @@ public class AccelLoggerService extends Service implements SensorEventListener {
                     csv += accelArray + ",";
                 }
                 DataUploader uploader = new DataUploader("jerkymotion", "accel", csv);
+                uploader.post();
                 jobFinished((JobParameters) msg.obj, false);
                 Log.i("hi","Anything");
                 return false;
