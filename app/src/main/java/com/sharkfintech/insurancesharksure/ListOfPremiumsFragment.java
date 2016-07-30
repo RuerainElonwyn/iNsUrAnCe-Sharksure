@@ -43,7 +43,7 @@ public class ListOfPremiumsFragment extends Fragment {
     }
 
 }
-public class PremiumAdaptor extends RecyclerView.Adapter<PremiumAdaptor.PremiumViewHolder>{
+class PremiumAdaptor extends RecyclerView.Adapter<PremiumAdaptor.PremiumViewHolder>{
     List<Premium> premiums;
     public PremiumAdaptor(List<Premium> premiums){
         this.premiums = premiums;
