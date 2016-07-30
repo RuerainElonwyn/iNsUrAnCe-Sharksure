@@ -43,41 +43,4 @@ public class ListOfPremiumsFragment extends Fragment {
     }
 
 }
-public class PremiumAdaptor extends RecyclerView.Adapter<PremiumAdaptor.PremiumViewHolder>{
-    List<Premium> premiums;
-    public PremiumAdaptor(List<Premium> premiums){
-        this.premiums = premiums;
-    }
-    public static class PremiumViewHolder extends RecyclerView.ViewHolder{
-        CardView cv;
-        TextView nameField;
-        TextView descriptionField;
 
-        public PremiumViewHolder(View itemView){
-            super(itemView);
-            cv = (CardView) itemView.findViewById(R.id.card_view);
-            nameField = (TextView) itemView.findViewById(R.id.card_name);
-            descriptionField = (TextView) itemView.findViewById(R.id.card_description);
-        }
-
-    }
-    @Override
-    public int getItemCount(){
-        return premiums.size();
-    }
-    @Override
-    public PremiumViewHolder onCreateViewHolder(ViewGroup viewGroup, int i){
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item, viewGroup, false);
-        PremiumViewHolder holder = new PremiumViewHolder(view);
-        return holder;
-    }
-    @Override
-    public void onBindViewHolder(PremiumViewHolder holder, int i){
-        holder.nameField.setText(premiums.get(i).getName());
-        holder.descriptionField.setText(premiums.get(i).getDescription());
-    }
-    @Override
-    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
-        super.onAttachedToRecyclerView(recyclerView);
-    }
-}

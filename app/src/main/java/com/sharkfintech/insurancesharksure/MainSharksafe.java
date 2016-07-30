@@ -80,7 +80,7 @@ public class MainSharksafe extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_intro) {
+        if (id == R.id.nav_overview) {
             //set FragmentArchwizardMain
             this.setTitle("AccelArchwizard");
             IntroFragment introFragment = new IntroFragment();
@@ -88,27 +88,21 @@ public class MainSharksafe extends AppCompatActivity
             fragmentTransaction.replace(R.id.fragment_container, introFragment);
             fragmentTransaction.commit();
 
-        }/* else if (id == R.id.nav_displacementtime) {
+        } else if (id == R.id.nav_suggestion) {
             this.setTitle("Displacement/Time Graph");
-            DisplacementTimeGraph distTimeGraph = new DisplacementTimeGraph();
+            SuggestionFragment suggestionFragment = new SuggestionFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, distTimeGraph);
+            fragmentTransaction.replace(R.id.fragment_container, suggestionFragment);
             fragmentTransaction.commit();
 
-        } else if (id == R.id.nav_velocitytime) {
+        } else if (id == R.id.nav_about) {
             this.setTitle("Velocity/Time Graph");
-            VelocityTimeGraph veloTimeGraph = new VelocityTimeGraph();
+            AboutFragment aboutFragment = new AboutFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, veloTimeGraph);
+            fragmentTransaction.replace(R.id.fragment_container, aboutFragment);
             fragmentTransaction.commit();
 
-        } else if (id == R.id.nav_accelerationtime) {
-            this.setTitle("Acceleration/Time Graph");
-            AccelerationTimeGraph accelTimeGraph = new AccelerationTimeGraph();
-            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment_container, accelTimeGraph);
-            fragmentTransaction.commit();*/
-
+        }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
