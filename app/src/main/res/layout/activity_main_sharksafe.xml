@@ -20,6 +20,17 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main_sharksafe"
-        app:menu="@menu/activity_main_sharksafe_drawer" />
+        app:menu="@menu/activity_main_sharksafe_drawer">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="-3dp"
+            android:clickable="false"
+            android:id="@+id/banner"
+            android:src="@drawable/bannerxxhdpi"/>
+
+    </android.support.design.widget.NavigationView>
 
 </android.support.v4.widget.DrawerLayout>

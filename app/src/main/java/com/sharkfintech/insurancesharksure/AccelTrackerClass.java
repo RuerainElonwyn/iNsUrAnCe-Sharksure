@@ -40,6 +40,7 @@ public class AccelTrackerClass extends Activity implements SensorEventListener {
     private static final int Z_AXIS_INDEX = 2;
 
     int counter;
+    int i=0;
 
     public String filePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/AccelArchwizard_trackerData";
     //public String fileDocumentPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS) + "/AccelArchwizard_trackerData";
@@ -157,10 +158,13 @@ public class AccelTrackerClass extends Activity implements SensorEventListener {
 
         // keep the point in another collection, for historic purposes
         //this.allSeismicActivity.add(point);
-
-
-        timeValues.add((System.currentTimeMillis() - time) / 1000f + "");
-        accelValues.add(event.values[0] + "");
+        if(i%10 == 0)
+        {
+            i=i-10;
+            timeValues.add((System.currentTimeMillis() - time) / 1000f + "");
+            accelValues.add(event.values[0] + "");
+        }
+        i++;
 
         /*saveValues.add((System.currentTimeMillis() - time) / 1000f + "");
         saveValues.add(event.values[0] + "");*/
